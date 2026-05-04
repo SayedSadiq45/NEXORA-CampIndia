@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlissCampIndia-Destination_Details</title>
+    <link rel="stylesheet" href="./details_css.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="overlay">
+        <nav class="nav-bar">
+          <a href="./treks.html" class="back-btn">←</a>
+          <div class="logo" id="logo">
+            BlissCampIndia
+          </div>
+        </nav>
+      </div>
+    <div class="rgf-container">
+        <div class="rgf-header">
+            <div class="rgf-title-section">
+                <h1 class="rgf-title" id="rgf-title"></h1>
+                <div id="rgf-meta" class="rgf-meta">
+                </div>
+            </div>
+            <div class="rgf-actions">
+                <button class="rgf-action-btn" aria-label="Bookmark" id="bookmark-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </button>
+                <button class="rgf-action-btn" aria-label="Share" id="share-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"/>
+                        <circle cx="6" cy="12" r="3"/>
+                        <circle cx="18" cy="19" r="3"/>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="rgf-gallery">
+            <div class="rgf-image-wrapper rgf-main-image">
+                <img src="" 
+                     alt="Harbor view with mountains" class="rgf-image">
+            </div>
+            <div class="rgf-gallery-right">
+                <div class="rgf-image-wrapper">
+                    <img src="./tour_images/group_1.webp" 
+                         alt="Mountain peak" class="rgf-image">
+                </div>
+                <div class="rgf-image-wrapper">
+                    <img src="./tour_images/group_2.webp" 
+                         alt="Mountain marker" class="rgf-image">
+                </div>
+                <div class="rgf-image-wrapper">
+                    <img src="./tour_images/group_3.webp" 
+                         alt="Mountain view" class="rgf-image">
+                </div>
+                <a href="../Gallery/index.html">
+                    <div class="rgf-image-wrapper">
+                        <img src="../images/hiking.jpg" 
+                             alt="Mountain landscape" class="rgf-image">
+                        <div class="rgf-more-photos">+12</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+              
+    </div>
+
+    <div class="dst-container">
+        <nav class="dst-nav">
+            <ul class="dst-nav-list">
+                <li class="dst-nav-item active tab-button" data-tab="overview">Overview</li>
+                <li class="dst-nav-item tab-button" data-tab="pros">Pros</li>
+                <li class="dst-nav-item tab-button" data-tab="cons">Cons</li>
+                <li class="dst-nav-item tab-button" data-tab="inclusions">What's included</li>
+                <li class="dst-nav-item tab-button" data-tab="availability">Availability</li>
+                <li class="dst-nav-item tab-button" data-tab="faqs">FAQs</li>
+                <li class="dst-nav-item tab-button" data-tab="policy">Policy</li>
+            </ul>
+        </nav>
+
+        <div class="dst-content">
+            <div id="overview" class="tab-content active">
+                <p id="overview-text"></p>
+            </div>
+            <div id="pros" class="tab-content">
+                <p id="pros-text"></p>
+            </div>
+            <div id="cons" class="tab-content">
+                <p id="cons-text"></p>
+            </div>
+            <div id="inclusions" class="tab-content">
+                <p id="inclusions-text"></p>
+            </div>
+            <div id="availability" class="tab-content">
+                <p>Availability information goes here.</p>
+            </div>
+            <div id="faqs" class="tab-content">
+                <p>FAQs go here.</p>
+            </div>
+            <div id="policy" class="tab-content">
+                <p>Policies go here</p>
+            </div>
+        </div>
+
+        <div class="dst-booking" style="border:1px solid rgb(0, 106, 255);">
+            <div class="dst-price">
+                Rs. <span id="price"></span> <span class="dst-price-unit">per person</span>
+            </div>
+        
+            <div class="dst-date-picker">
+                <label class="dst-date-label">Month</label>
+                <select id="month" class="dst-date-select">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+        
+                <label class="dst-date-label">Season</label>
+                <select id="season" class="dst-date-select">
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Autumn">Autumn</option>
+                    <option value="Winter">Winter</option>
+                    <option value="Monsoon">Monsoon</option>
+                </select>
+        
+                <label class="dst-date-label">Persons</label>
+                <select id="modalPersons" class="dst-guest-select">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Persons</option>
+                    <option value="3">3 Persons</option>
+                    <option value="4">4 Persons</option>
+                </select>
+            </div>
+        
+            <div class="dst-total">
+                <span class="dst-total-label">Duration</span>
+                <span id="duration" class="dst-total-amount"></span>
+            </div>
+        
+            <!-- Total Price Section -->
+            <div class="dst-total-price" style="padding-top:10px;padding-bottom:20px;">
+                <span class="dst-total-price-label">Total Price:</span>
+                Rs. <span id="totalDisplay">0</span>
+            </div>
+        
+            <button id="bookNow" class="dst-book-button">Book Now</button>
+            <a href="../contact_us/contact.html" class="dst-ask-manager">Ask a Question</a>
+        </div>
+    </div>
+    <div class="loc-container">
+        
+        <h2 class="loc-heading">Location</h2>
+        <div class="loc-map-container">
+            <div id="map" class="loc-map"></div>
+            <div id="loc-loading" class="loc-loading">Loading map...</div>
+        </div>
+        <div id="loc-error" class="loc-error">
+            Unable to load the map. Please try again later.
+        </div>
+        <div class="loc-long-lat">
+            <p><strong>Latitude:</strong> <span id="latitude" style="color: blue;"></span></p>&emsp;
+            <p><strong>Longitude:</strong> <span id="longitude" style="color: blue;"></span></p>
+        </div>
+    </div>
+    <section class="winter-treks summer-treks monsoon-treks">
+           
+    </section>
+    <!-- Book Now Modal -->
+<div id="bookingModal" class="modal unique-modal" style="display: none;">
+    <div class="modal-content unique-modal-content">
+      <span class="close unique-close">&times;</span>
+      <h2 class="unique-title">Fill Your Booking Details</h2>
+      <form id="bookingForm">
+        <label for="name" class="unique-label">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" class="unique-input" required />
+  
+        <label for="email" class="unique-label">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" class="unique-input" required />
+  
+        <label for="address" class="unique-label">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" class="unique-input" required />
+  
+        <label for="contact" class="unique-label">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" class="unique-input" required />
+  
+        <!-- <label for="persons">Number of Persons:</label> -->
+        <!-- <select id="modalPersons" name="persons">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select> -->
+  
+        <div class="unique-price-details">
+          <p>Total Price: <span id="modalTotalPrice">0</span></p>
+        </div>
+  
+        <button type="button" id="confirmBooking" class="unique-button">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+  <script>
+            // Select buttons
+        const bookmarkBtn = document.getElementById('bookmark-btn');
+        const shareBtn = document.getElementById('share-btn');
+
+        // Bookmark functionality
+        bookmarkBtn.addEventListener('click', () => {
+            let isBookmarked = bookmarkBtn.classList.toggle('bookmarked'); // Toggle bookmarked state
+            if (isBookmarked) {
+                alert('Added to Bookmarks!');
+                bookmarkBtn.style.color = '#f39c12'; // Example: Change icon color
+            } else {
+                alert('Removed from Bookmarks!');
+                bookmarkBtn.style.color = 'inherit'; // Reset to default color
+            }
+        });
+
+        // Share functionality
+        shareBtn.addEventListener('click', async () => {
+            const shareData = {
+                title: 'Example Page',
+                text: 'Check out this amazing page!',
+                url: window.location.href, // Current page URL
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                    alert('Thanks for sharing!');
+                } catch (err) {
+                    console.error('Error sharing:', err);
+                }
+            } else {
+                alert('Share API not supported on this browser. Copy the link instead: ' + shareData.url);
+            }
+        });
+  </script>
+    <script src="./map.js"></script>
+    <script src="details_script.js"></script>   
+</body>
+</html>

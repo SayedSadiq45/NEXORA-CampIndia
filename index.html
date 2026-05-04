@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlissCampIndia</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://github.hubspot.com/odometer/odometer.js'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <section class="loader">
+    <div class="loader-container">
+      <div class="tent-icon">
+        <img src="./images/logo.png" alt="" style="width: 170px;">
+      </div>
+      <p id="tagline">Your adventure awaits...</p>
+      <div class="loading-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+      </div>
+  </div>
+  </section>
+  <div class="popup" id="trekPopup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Kedarkantha Trek is ON!</h2>
+    <p>Experience the breathtaking beauty of the Himalayas on our Kedarkantha trek. Limited spots available!</p>
+    <button class="PBook_Now">Book Now</button>
+</div>
+    <section class="BodySection">
+      <section class="hero-section">
+        <video class="hero-video" autoplay muted loop>
+          <source src="./videos/v_1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+          <nav class="nav-bar">
+            <div class="logo" id="logo">
+              BlissCampIndia
+            </div>
+            
+            <!-- Hamburger Icon for Mobile -->
+            <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links">
+              <a href="./index.html">Home</a>
+              <a href="./About_Us/about_us.html">About Us</a>
+              <a href="./Treks_Destinations/treks.html">Our Treks</a>
+              <a href="./destination/index.html">Destinations</a>
+              <a href="./Gallery/index.html">Gallery</a>
+              <a href="./blog/blog.html">Blog</a>
+              <a href="./contact_us/contact.html">Contact Us</a>
+            </div>
+          </nav>
+          
+          <!-- Hero Content -->
+          <div class="hero-content" id="hero-content">
+            <h1>Discover Your Next Great Adventure</h1>
+            <p>Immerse yourself in the extraordinary with us, uncovering the world's hidden gems.</p>
+            <div class="floating-buttons">
+              <!-- WhatsApp Button -->
+              <button class="floating-btn" id="whatsapp-btn" title="WhatsApp">
+                <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+              </button>
+              
+              <!-- Contact Us Button -->
+              <button class="floating-btn" id="contact-btn" title="Contact Us">
+                <i class="fa fa-address-book" style="font-size: 24px;"></i>
+              </button>
+              
+              <!-- Additional Button -->
+              <button class="floating-btn" id="info-btn" title="More Info">
+                <i class="fa fa-info" style="font-size: 24px;"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Search Bar -->
+          <div class="search-bar" id="search-bar">
+            <div class="input-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="Enter Tour Name Here">
+            </div>
+            <div class="input-group">
+              <label for="tour_type">Tour Type</label>
+              <select id="tour_type">
+                <option value="" disabled selected>Select Tour Type</option>
+                <option value="Summer">Summer</option>
+                <option value="Monsoon">Monsoon</option>
+                <option value="Winter">Winter</option>
+                <option value="Autumn">Autumn</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="destinationFilter">Destination</label>
+              <select id="destinationFilter">
+                <option value="">All Destinations</option>
+                <option value="Manali">Manali</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Goa">Goa</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Himachal Pradesh">Himanchal Pradesh</option>
+                <option value="Kashmir">Kashmir</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Assam">Assam</option>
+                <option value="Darjeeling">Darjeeling</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Maharashtra">Maharashtra</option>
+              </select>
+            </div>
+            <button class="search-btn">Search →</button>
+          </div>
+        </div>
+      </section>
+          <section class="dest-container">
+            <!-- Background Shapes -->
+            <div class="background-shape shape-1"></div>
+            <div class="background-shape shape-2"></div>
+          
+            <!-- Content Container -->
+            <div class="content-container">
+              <h2>Some Of Our Destinations</h2>
+              <p>
+                Discover the serene hills of Himachal, the spiritual calm of Uttarakhand, and the majestic peaks of Kashmir and Ladakh. Adventure, peace, and natural beauty await in India's mountains.
+              </p>
+              <div class="divider"></div>
+            </div>
+            <main>
+              <div class="container">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="./images/himachal.jpg" alt="Awesome views">
+                      </div>
+                      <div class="more">
+                        <ul>
+                          <li><img src="https://plus.unsplash.com/premium_photo-1672115680958-54438df0ab82?q=80&w=1784&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+                          <li><img src="https://images.unsplash.com/photo-1600298882283-40b4dcb8b211?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+                          <li><img src="https://plus.unsplash.com/premium_photo-1667987781458-c45c1ad5dfe1?q=80&w=2051&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></li>
+                          <li><a href="./Gallery/index.html"><img src="https://images.unsplash.com/photo-1600298882698-312a4137fd33?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""><span>20+</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="tag">
+                        <a href="./Gallery/index.html">#Uttrakhand</a>
+                      </div>
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="card video">
+                  <div class="card-inner">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="./images/kashmir.webp" alt="Awesome views">
+                      </div>
+            
+                      <div class="tag">
+                        <a href="./Gallery/index.html">#Kashmir</a>
+                      </div>
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <p class="moreT"><a href="./Treks_Destinations/treks.html">More about tours</a> </p>
+                  <div class="card-inner">
+                    <div class="box">
+                      <div class="imgBox">
+                        <img src="./images/hiking.jpg" alt="Hiking">
+                      </div>
+            
+                      <div class="more">
+                        <a href="./Treks_Destinations/treks.html" class="arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                          </svg></a>
+            
+                      </div>
+                      <div class="tag">
+                        <a href="./Gallery/index.html">#Hiking</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <section class="unique-why-choose-us">
+              <div class="background-shape shape-2"></div>
+              <h2 class="unique-heading">Why Choose Us?</h2>
+              <div class="unique-container">
+                <div class="unique-card" id="card-1">
+                  <img src="./images/map.png" alt="Accommodation" class="unique-icon">
+                  <h3 class="unique-title">Accommodation</h3>
+                  <p class="unique-description">
+                    Experience the Best of Adventure – Premium meals, luxury stays, top-notch trekking equipment, and more.
+                  </p>
+                </div>
+                <div class="unique-card" id="card-2">
+                  <img src="./images/earth.png" alt="World Class Service" class="unique-icon">
+                  <h3 class="unique-title">World Class Service</h3>
+                  <p class="unique-description">
+                    Unleash the World-Class Experience – Discover unparalleled service and a level of excellence.
+                  </p>
+                </div>
+                <div class="unique-card" id="card-3">
+                  <img src="./images/ballon.png" alt="Best Price Guarantee" class="unique-icon">
+                  <h3 class="unique-title">Best Price Guarantee</h3>
+                  <p class="unique-description">
+                    Unlock the Best Price Guarantee – Enjoy luxury and affordability with our unbeatable deals.
+                  </p>
+                </div>
+              </div>
+            </section>      
+          </section>
+          <section class="Asection">
+            <div class="achievements-section">
+              <div class="achievements-title">Our Achievements</div>
+              <div class="achievement-container">
+                <div class="achievement-box">
+                  <div class="achievement-icon"><img src="./images/customer.png" alt="" class="ach-png"></div>
+                  <div class="odometer odometer-customers"></div>
+                  <div class="achievement-label">Customers</div>
+                </div>
+                <div class="achievement-box">
+                  <div class="achievement-icon"><img src="./images/palm.png" alt="" class="ach-png"></div>
+                  <div class="odometer odometer-destinations"></div>
+                  <div class="achievement-label">Destinations</div>
+                </div>
+                <div class="achievement-box">
+                  <div class="achievement-icon"><img src="./images/destination.png" alt="" class="ach-png"></div>
+                  <div class="odometer odometer-treks"></div>
+                  <div class="achievement-label">Treks</div>
+                </div>
+                <div class="achievement-box">
+                  <div class="achievement-icon"><img src="./images/bus.png" alt="" class="ach-png"></div>
+                  <div class="odometer odometer-distance"></div>
+                  <div class="achievement-label">Distance Covered</div>
+                </div>
+              </div>
+              <button class="book-now-button">Book Now</button>
+            </div>
+          </section>
+          <section>
+            <div class="deals-section"></div>
+            <div class="promo-banner">
+              <h2 class="promo-title">
+                Special Tour in December, January, February <br>Discover Kedarkantha, Chopta, Tungnath with
+              </h2>
+              <p class="promo-discount">Discount 30%</p>
+              <p class="promo-info">It’s limited seating! Hurry up</p>
+              <button class="promo-btn">Book Now</button>
+            </div>
+          </section>
+          <section class="winter-treks">
+          </section>
+          <section class="winter-treks summer-treks">
+           
+          </section>
+          <section class="winter-treks monsoon-treks">
+          </section>
+          <section class="testimonials-section">
+            <div class="header">
+              <h1>Hear From Our Happy Travelers ❤️</h1>
+            </div>
+            <div class="title-underline"></div>
+            <div class="content">
+              <div class="imgPcomm">
+                <div class="image-area">
+                  <img src="./images/2.jpg" alt="Mountain landscape in India">
+                  <p class="stat">10.9K+</p>
+                </div>
+                <div class="testimonial-card">
+                  <p class="quote">"Basically to say, I was very astonished after seeing the work of the team that we hired and they were very friendly, asked people about what they need and provided it."</p>
+                  <div class="author">
+                    <img src="./images/aditya.png" alt="">
+                    <div>
+                      <p class="name">Aditya Sharma</p>
+                      <p class="title">Solo Traveler</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials">
+                <div class="testimonial-card">
+                  <p class="quote">"Exploring the serene mountains of Himachal Pradesh with this travel agency was a life-changing experience. From picturesque views to seamless planning, it was perfect!"</p>
+                  <div class="author">
+                    <img src="./images/gaureesh.png" alt="">
+                    <div>
+                      <p class="name">Gaureesh B. Tomar</p>
+                      <p class="title">Traveler, Adventure Seeker</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <p class="quote">"Our trip to the majestic valleys of Ladakh was beyond words. The team ensured we had safe yet thrilling adventures amidst breathtaking landscapes."</p>
+                  <div class="author">
+                    <img src="./images/nitish.png" alt="">
+                    <div>
+                      <p class="name">Nitish</p>
+                      <p class="title">Photographer,Developer, Nature Lover</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-card">
+                  <p class="quote">"Discovering the unexplored trails in Uttarakhand was a dream come true. Every moment was magical, thanks to their expert guides and top-notch services."</p>
+                  <div class="author">
+                    <img src="./images/nitin.png" alt="">
+                    <div>
+                      <p class="name">Nitin Kumar</p>
+                      <p class="title">Solo Traveler</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="travel-website-footer">
+            <div class="travel-footer-container">
+                <div class="travel-footer-top">
+                    <div class="row">
+                       <div class="col12">
+                         <!-- Contact Information -->
+                         <div class="col-lg-4 col-md-6 mb-4 leftF">
+                            <h4 class="travel-footer-heading">Contact Us</h4>
+                            <ul class="travel-footer-contact-info">
+                              <li>
+                                  <i class="fas fa-phone" style="color: #ff5e14; margin-right: 10px;"></i>
+                                  +91 6397073391 (blisscampIndia)
+                              </li>
+                              <li>
+                                  <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 10px;"></i>
+                                  <a href="https://wa.me/6397073391" target="_blank" style="color: inherit; text-decoration: none;">+91 6397073391 </a>
+                              </li>
+                              <li>
+                                  <i class="fas fa-envelope" style="color: #0072C6; margin-right: 10px;"></i>
+                                  <a href="mailto:blisscampIndia@gmail.com" style="color: inherit; text-decoration: none;">blisscampIndia@gmail.com</a>
+                              </li>
+                              <li>
+                                  <i class="fas fa-map-marker-alt" style="color: #E63946; margin-right: 10px;"></i>
+                                  Premnagar, Dehradun, Uttrakhand, India  - 248007
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="social-div">
+                            <h4 class="travel-footer-heading">Connect with Us</h4>
+                            <div class="travel-footer-social-links">
+                                <a href="https://www.facebook.com/profile.php?id=61560495458922" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/blisscampindia?igsh=M2NrNm03am5rMXBy" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/blisscampindia?igsh=M2NrNm03am5rMXBy" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/@BlisscampIndia-t7d" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  <div class="travel-footer-bottom text-center">
+                      <p>&copy; 2024 BlissCampIndia</p>
+                  </div>
+            </div>
+        </footer>
+    </section>
+    <script src="./winter_treks.js"></script>
+    <script src="./deals_section.js"></script>
+    <script src="./summer_treks.js"></script>
+    <script src="./monsoon_treks.js"></script>
+    <script src="./scripts.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Loader animation
+  const loader = document.querySelector('.loader');
+  const body = document.querySelector('body');
+
+  if (loader && body) { // Check if loader and body elements exist
+    body.style.overflow = 'hidden'; // Disable scrolling
+
+    setTimeout(() => {
+      // Add hidden class to loader for animation
+      loader.classList.add('hidden');
+
+      // Re-enable scrolling after loader disappears
+      setTimeout(() => {
+        body.style.overflow = 'auto';
+      }, 1000); // Wait for the loader animation to complete
+    }, 2000); // Keep loader active for 2 seconds
+  }
+});
+
+
+      document.querySelector(".search-btn").addEventListener("click", function () {
+        // Get values from the inputs
+        const location = document.getElementById("location").value;
+        const tourType = document.getElementById("tour_type").value;
+        const destination = document.getElementById("destinationFilter").value;
+
+        // Create query parameters
+        const queryParams = new URLSearchParams({
+          location: location,
+          tourType: tourType,
+          destination: destination,
+        });
+
+        // Redirect to the new page with query parameters
+        window.location.href = `./Treks_Destinations/treks.html?${queryParams.toString()}`;
+
+      });
+
+
+      document
+        .querySelector(".book-now-button")
+        .addEventListener("click", function () {
+          window.location.href = "./Treks_Destinations/treks.html"; // Redirect to index.html
+        });
+        document
+        .querySelector(".promo-btn")
+        .addEventListener("click", function () {
+          window.location.href = "./Treks_Destinations/treks.html"; // Redirect to index.html
+        });
+
+        // WhatsApp Button Functionality
+      document.getElementById("whatsapp-btn").addEventListener("click", function () {
+        const whatsappNumber = "+916397073391"; // Replace WhatsApp number
+        const message = encodeURIComponent("Hello! I need some assistance regarding the treks on BlissCampIndia");
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+      });
+
+      // Contact Us Button Functionality
+      document.getElementById("contact-btn").addEventListener("click", function () {
+        alert("Redirecting to the Contact Us page...");
+        window.location.href = "./contact_us/contact.html"; // Replace with your contact page URL
+      });
+
+      function showPopup() {
+            const popup = document.getElementById("trekPopup");
+            popup.classList.add("show");
+        }
+
+        function closePopup() {
+            const popup = document.getElementById("trekPopup");
+            popup.classList.remove("show");
+        }
+
+        // Show popup after 3 seconds
+        setTimeout(showPopup, 3000);
+
+        document.querySelector('.PBook_Now').addEventListener("click", () => {
+            const params = new URLSearchParams({
+              id: "1",
+              title: "Kedarkantha Trek",
+              price: 7500,
+              brief_description: "Experience the magic of a winter wonderland with our Kedarkantha Trek in Uttarakhand. This popular trek offers a perfect blend of adventure and scenic beauty, making it an ideal choice for both beginners and experienced trekkers. Situated in the Govind Wildlife Sanctuary, Kedarkantha peak stands at an elevation of 12,500 feet, offering panoramic views of some of the most prominent Himalayan peaks. The journey begins in the charming village of Sankri, where you'll get a glimpse of the traditional Garhwali lifestyle. As you ascend through dense pine and oak forests, you'll be treated to the sight of snow-covered trails and frozen streams. The trek is particularly famous for its beautiful campsites, each offering a unique perspective of the surrounding snow-clad mountains. The highlight of the trek is the summit climb, which rewards you with a 360-degree view of majestic peaks like Swargarohini, Bandarpoonch, and Kalanag. During winter, the entire landscape is transformed into a white paradise, with snow-covered meadows and forests creating a magical atmosphere. Our experienced guides will ensure your safety and comfort, sharing interesting facts about the local flora, fauna, and mountain ecology. You'll also have the opportunity to experience the warm hospitality of the local villagers and taste traditional Garhwali cuisine. The Kedarkantha Trek is known for its gradual ascent, making it accessible to fitness enthusiasts of all levels. Whether you're looking for a thrilling snow trek, breathtaking views, or a peaceful escape into nature, the Kedarkantha Trek promises an unforgettable adventure in the heart of the Himalayas.",
+              destination: "Uttarakhand",
+              month: "December",
+              rating: 5,
+              image: "../images/kedarkantha-trek.jpg",
+              days: 6,
+              nights: 5,
+              pros: [
+                    "Spectacular snow-covered landscapes",
+                    "Suitable for beginners and families",
+                    "Beautiful campsites with panoramic views",
+                  ],
+              cons: [
+                    "Very cold temperatures in winter",
+                    "Requires proper winter gear",
+                    "Possible altitude sickness for some",
+                  ],
+              inclusions: [
+                    "Experienced winter trek guides",
+                    "Warm camping equipment",
+                    "Hot nutritious meals",
+                    "Transportation from Dehradun",
+                    "Forest permits and fees",
+                  ],
+              latitude: 31.0275,
+              longitude: 78.195,
+              season: "Winter",
+          });
+          window.location.href = `./Treks_Destinations/details.html?${params.toString()}`;
+        });
+
+    </script>
+    <script>
+      // Initialize odometers
+      const customersOdometer = new Odometer({
+        el: document.querySelector('.odometer-customers'),
+        value: 0,
+        theme: 'minimal',
+        duration: 2000,
+      });
+
+      const destinationsOdometer = new Odometer({
+        el: document.querySelector('.odometer-destinations'),
+        value: 0,
+        theme: 'minimal',
+        duration: 2000,
+      });
+
+      const treksOdometer = new Odometer({
+        el: document.querySelector('.odometer-treks'),
+        value: 0,
+        theme: 'minimal',
+        duration: 2000,
+      });
+
+      const distanceOdometer = new Odometer({
+        el: document.querySelector('.odometer-distance'),
+        value: 0,
+        theme: 'minimal',
+        duration: 2000,
+      });
+
+      // Function to update odometer values
+      function updateOdometers() {
+        customersOdometer.update(700);
+        destinationsOdometer.update(20);
+        treksOdometer.update(30);
+        distanceOdometer.update(2350);
+      }
+
+      // Intersection Observer to detect visibility
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateOdometers(); // Trigger odometer update
+            observer.unobserve(entry.target); // Stop observing after the update
+          }
+        });
+      }, {
+        threshold: 0.5, // Trigger when 50% of the section is visible
+      });
+
+      // Observe the achievements section
+      const achievementsSection = document.querySelector('.achievements-section');
+      observer.observe(achievementsSection);
+
+    </script>
+    <script>
+      // Initialize ScrollReveal
+      ScrollReveal().reveal('#logo', {
+        origin: 'top',
+        distance: '50px',
+        duration: 600,
+        delay: 200,
+        easing: 'ease-in-out',
+        opacity: 0
+      });
+
+      ScrollReveal().reveal('#hero-content', {
+        origin: 'bottom',
+        distance: '70px',
+        duration: 800,
+        delay: 400,
+        easing: 'ease-in-out',
+        opacity: 0
+      });
+
+      ScrollReveal().reveal('#search-bar', {
+        origin: 'bottom',
+        distance: '100px',
+        duration: 1000,
+        delay: 500,
+        easing: 'ease-in-out',
+        opacity: 0
+      });
+
+      // Reveal Content Container
+      ScrollReveal().reveal('.content-container', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 800,
+        delay: 200,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Each Card in the Container
+      ScrollReveal().reveal('.container .card', {
+        origin: 'center',
+        distance: '50px',
+        duration: 600,
+        interval: 150, // Faster interval between cards
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal "Why Choose Us?" Section
+      ScrollReveal().reveal('.unique-why-choose-us', {
+        origin: 'left',
+        distance: '50px',
+        duration: 800,
+        delay: 300,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Individual Cards in "Why Choose Us?"
+      ScrollReveal().reveal('.unique-card', {
+        origin: 'left',
+        distance: '30px',
+        duration: 600,
+        interval: 150, // Faster interval between cards
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Deals Section Title
+      ScrollReveal().reveal('.deals-title', {
+        origin: 'top',
+        distance: '30px',
+        duration: 600,
+        delay: 200,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Each Deal Card with Staggered Animations
+      ScrollReveal().reveal('.deal-card', {
+        origin: 'left',
+        distance: '40px',
+        duration: 600,
+        interval: 150, // Faster interval between cards
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Deal Details (Title, Duration, Description, Price)
+      ScrollReveal().reveal('.deal-details', {
+        origin: 'right',
+        distance: '20px',
+        duration: 600,
+        delay: 200,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal the Promo Banner Section
+      ScrollReveal().reveal('.promo-banner', {
+        origin: 'left',
+        distance: '50px',
+        duration: 800,
+        delay: 300,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal the Promo Title and Discount Info
+      ScrollReveal().reveal('.promo-title, .promo-info', {
+        origin: 'left',
+        distance: '30px',
+        duration: 600,
+        delay: 400,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal the Promo Button
+      ScrollReveal().reveal('.promo-btn', {
+        origin: 'right',
+        distance: '30px',
+        duration: 600,
+        delay: 600,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Section Titles (Winter, Summer, Monsoon)
+      ScrollReveal().reveal('.section-title', {
+        origin: 'top',
+        distance: '30px',
+        duration: 600,
+        delay: 200,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal the Trek Cards
+      ScrollReveal().reveal('.trek-card', {
+        origin: 'bottom',
+        distance: '40px',
+        duration: 600,
+        interval: 150, // Faster interval between cards
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Price Badge, Image, and Trek Details
+      ScrollReveal().reveal('.trek-image, .trek-details', {
+        origin: 'bottom',
+        distance: '20px',
+        duration: 600,
+        delay: 200,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Trek Footer (Rating & Button)
+      ScrollReveal().reveal('.trek-footer', {
+        origin: 'bottom',
+        distance: '20px',
+        duration: 600,
+        delay: 400,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Title Underline
+      ScrollReveal().reveal('.title-underline', {
+        origin: 'left',
+        distance: '30px',
+        duration: 500,
+        delay: 100,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Section Header (Testimonials Title)
+      ScrollReveal().reveal('.header h1', {
+        origin: 'top',
+        distance: '30px',
+        duration: 600,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Image and Stats (First Image and Stat)
+      ScrollReveal().reveal('.imgPcomm .image-area', {
+        origin: 'left',
+        distance: '50px',
+        duration: 600,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+      ScrollReveal().reveal('.imgPcomm .stat', {
+        origin: 'right',
+        distance: '50px',
+        duration: 600,
+        opacity: 0,
+        delay: 200,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Testimonial Cards
+      ScrollReveal().reveal('.testimonial-card, .viewBtn', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 600,
+        interval: 150,  // Faster interval between cards
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Footer Elements (Contact Us, Social Links, and Bottom)
+      ScrollReveal().reveal('.travel-footer-top .col12', {
+        origin: 'bottom',
+        distance: '40px',
+        duration: 600,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+      ScrollReveal().reveal('.travel-footer-social-links', {
+        origin: 'bottom',
+        distance: '40px',
+        duration: 600,
+        opacity: 0,
+        delay: 200,
+        easing: 'ease-in-out'
+      });
+
+      // Reveal Footer Bottom Text
+      ScrollReveal().reveal('.travel-footer-bottom p', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 600,
+        delay: 300,
+        opacity: 0,
+        easing: 'ease-in-out'
+      });
+
+    </script>
+    
+</body>
+</html>

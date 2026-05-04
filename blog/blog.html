@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlissCampIndia-Blogs</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <link rel="stylesheet" href="./blog_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <div class="overlay">
+        <nav class="nav-bar">
+          <a href="../index.html" class="back-btn">←</a>
+          <div class="logo" id="logo">
+            BlissCampIndia
+          </div>
+        </nav>
+      </div>
+    <div class="main-container">
+        <div id="postsContainer"> <p style="font-size: 40px;color:rgb(154, 152, 152)">Loading...</p></div>
+        <div class="create-post-container">
+            <div class="create-post">
+                <h3>Create a New Post</h3>
+                <div class="profile-photo" style="display:flex; justify-content: center; align-items: center;">
+                    <img id="profilePhotoPreview" src="https://via.placeholder.com/100" alt="Profile Photo">
+                    <div style="display: flex;flex-direction: column;">
+                      <input type="text" name="name" id="userName" placeholder="Enter your Name Here">
+                      <input type="file" id="profilePhotoInput" onchange="previewProfilePhoto(event)">
+                    </div>
+    
+                </div>
+                <input type="text" id="postTitle" placeholder="Post Title" required>
+                <textarea id="postContent" placeholder="Share your travel story..." rows="3"></textarea>
+                <div>
+                  <label for="postImageInput">Post Image (Max 400KB):</label>
+                  <input type="file" id="postImageInput" accept="image/*">
+                </div>
+                <div id="statusMessage"></div>
+                <button onclick="addPost()">Submit Post</button>
+            </div>
+        </div>
+    </div>
+    <footer class="travel-website-footer">
+      <div class="travel-footer-container">
+          <div class="travel-footer-top">
+              <div class="row">
+                 <div class="col12">
+                   <!-- Contact Information -->
+                   <div class="col-lg-4 col-md-6 mb-4 leftF">
+                      <h4 class="travel-footer-heading">Contact Us</h4>
+                      <ul class="travel-footer-contact-info">
+                        <li>
+                            <i class="fas fa-phone" style="color: #ff5e14; margin-right: 10px;"></i>
+                            +91 6397073391 (blisscampIndia)
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 10px;"></i>
+                            <a href="https://wa.me/6397073391" target="_blank" style="color: inherit; text-decoration: none;">+91 6397073391 </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope" style="color: #0072C6; margin-right: 10px;"></i>
+                            <a href="mailto:blisscampIndia@gmail.com" style="color: inherit; text-decoration: none;">blisscampIndia@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" style="color: #E63946; margin-right: 10px;"></i>
+                            Premnagar, Dehradun, Uttrakhand, India  - 248007
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="social-div">
+                      <h4 class="travel-footer-heading">Connect with Us</h4>
+                      <div class="travel-footer-social-links">
+                          <a href="https://www.facebook.com/profile.php?id=61560495458922" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://www.instagram.com/blisscampindia?igsh=M2NrNm03am5rMXBy" target="_blank"><i class="fab fa-instagram"></i></a>
+                          <a href="https://www.instagram.com/blisscampindia?igsh=M2NrNm03am5rMXBy" target="_blank"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.youtube.com/@BlisscampIndia-t7d" target="_blank"><i class="fab fa-youtube"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            <div class="travel-footer-bottom text-center">
+                <p>&copy; 2024 BlissCampIndia</p>
+            </div>
+      </div>
+  </footer>
+    <script src="./blog_script.js" type="module"></script>
+</body>
+</html>
